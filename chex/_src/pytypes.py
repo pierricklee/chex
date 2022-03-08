@@ -39,8 +39,8 @@ Shape = Tuple[int, ...]
 
 CpuDevice = jax.lib.xla_extension.CpuDevice
 GpuDevice = jax.lib.xla_extension.GpuDevice
-TpuDevice = jax.lib.xla_extension.TpuDevice
-Device = Union[CpuDevice, GpuDevice, TpuDevice]
+IpuDevice = jax.lib.ipu_extension.IpuDevice
+Device = Union[CpuDevice, GpuDevice, IpuDevice]
 
 # As of 06/2020 pytype doesn't support recursive types (see b/109648354)
 # pytype: disable=not-supported-yet
